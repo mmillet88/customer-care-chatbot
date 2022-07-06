@@ -1,15 +1,15 @@
 version: '3.4'
 services:
 
-  duckling-server:
+  duckling-server2:
     image: rasa/duckling:latest
     ports:
     - 8000:8000
     networks:
     - all
 
-  rasa-server:
-    image: rasa-bot:latest
+  rasa-server2:
+    image: rasa-bot2:latest
     working_dir: /app
     build: "./"
     restart: always
@@ -23,8 +23,8 @@ services:
     networks:
     - all
 
-  rasa-actions-server:
-    image: rasa-bot:latest
+  rasa-actions-server2:
+    image: rasa-bot2:latest
     working_dir: /app
     build: "./"
     restart: always
